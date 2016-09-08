@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="silentCloud1651">
+<head>
+    <title>silent-cloud-1651</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>silent-cloud-1651</title>
+    <link rel="stylesheet" href="vendor/angular-material/angular-material.css"/>
+    <link rel="stylesheet" href="vendor/angular-material/layouts/angular-material.layouts.css"/>
+    <link rel="stylesheet" href="vendor/angular-material/layouts/angular-material.layout-attributes.css"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/app.css"/>
+</head>
+<body ng-cloak>
+
+    <div layout="column" layout-fill>
+        <div ui-view="main" layout="column" flex></div>
+        <div ui-view="details" layout="column"></div>
+        <md-progress-linear class="md-accent" md-mode="indeterminate" ng-show="busy"></md-progress-linear>
+    </div>
+
+    <script src="vendor/lodash/lodash.js"></script>
+    <script src="vendor/angular/angular.js"></script>
+    <script src="vendor/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="vendor/angular-animate/angular-animate.js"></script>
+    <script src="vendor/angular-resource/angular-resource.js"></script>
+    <script src="vendor/angular-cookies/angular-cookies.js"></script>
+    <script src="vendor/angular-mocks/angular-mocks.js"></script>
+    <script src="vendor/angular-aria/angular-aria.js"></script>
+    <script src="vendor/angular-messages/angular-messages.js"></script>
+    <script src="vendor/angular-material/angular-material.js"></script>
+
+    <script src="app.js"></script>
+    <script src="search/search.js"></script>
+    <script src="search/results.js"></script>
+    <script src="watch/watch.js"></script>
+
+</body>
+</html>

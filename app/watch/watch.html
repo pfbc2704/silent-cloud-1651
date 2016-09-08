@@ -1,0 +1,28 @@
+<div ng-controller="WatchCtrl" layout="column" flex class="watch-ctrl">
+    <md-toolbar md-theme="dark" class="md-primary md-hue-2">
+        <div class="md-toolbar-tools" ng-if="stream!=null">
+            <md-button class="md-icon-button md-primary" ng-click="close();">
+                <md-icon class="material-icons md-48">arrow_back</md-icon>
+            </md-button>
+            <h2>
+                <span>
+                    <strong>{{stream.channel.status}}</strong>
+                    {{stream.channel.game}}
+                </span>
+            </h2>
+            <span flex></span>
+            <h3>
+                <span>viewers: <strong>{{stream.viewers}}</strong></span>
+            </h3>
+        </div>
+    </md-toolbar>
+    <iframe ng-if="stream!=null"
+            ng-src="{{streamSrc}}"
+            height="100%"
+            width="100%"
+            frameborder="0"
+            scrolling="no"
+            allowfullscreen="true">
+    </iframe>
+
+</div>

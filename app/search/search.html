@@ -1,0 +1,24 @@
+<div ng-controller="SearchCtrl" layout="column" flex class="search-ctrl">
+    <md-toolbar md-theme="dark" class="md-primary md-hue-2">
+        <div class="md-toolbar-tools">
+            <h2>
+                <span>{{title}}</span>
+            </h2>
+            <span flex></span>
+            <div>
+                <md-input-container md-no-float>
+                    <input ng-model="searchQ" id="searchQ" placeholder="search streams here">
+                </md-input-container>
+                <md-button ng-show="searchQ !== resultQ" class="md-icon-button md-primary" ng-click="search()">
+                    <md-icon class="material-icons md-48">search</md-icon>
+                </md-button>
+                <md-button ng-show="resultQ.length > 0 && searchQ === resultQ" class="md-icon-button md-primary" ng-click="reset();">
+                    <md-icon class="material-icons md-48">clear</md-icon>
+                </md-button>
+            </div>
+            <span flex></span>
+        </div>
+    </md-toolbar>
+    <div ui-view="results" layout="row" flex></div>
+</div>
+

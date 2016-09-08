@@ -1,0 +1,31 @@
+.search-ctrl {
+
+  md-toolbar {
+
+    md-input-container {
+      width: 400px;
+      margin-bottom: 0;
+    }
+  }
+
+  md-content {
+
+    md-card {
+      //min-width: 250px;
+      cursor: pointer;
+    }
+
+  }
+
+}
+
+.md-fab {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+
+}
+
+.stream {
+    overflow: hidden;
+}

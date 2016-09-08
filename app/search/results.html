@@ -1,0 +1,18 @@
+<md-content ng-controller="ResultsCtrl" layout="column">
+    <div layout="row" layout-wrap layout-padding>
+        <div flex="20" class="stream" ng-repeat="stream in streams track by $index">
+            <md-card  ng-click="watch(stream)">
+                <img ng-src="{{stream.preview.medium}}" class="md-card-image" alt="">
+                <md-card-header>
+                    <md-card-header-text>
+                        <span class="md-title">{{stream.channel.status}}</span>
+                        <span class="md-subhead">{{stream.channel.display_name}} playing {{stream.channel.game}}</span>
+                    </md-card-header-text>
+                </md-card-header>
+            </md-card>
+        </div>
+    </div>
+    <md-button ng-show="streams.length > 0 && next" ng-disabled="isBusy()" class="md-fab" ng-click="loadMore();">
+        <md-icon class="material-icons">add</md-icon>
+    </md-button>
+</md-content>
