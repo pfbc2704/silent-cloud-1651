@@ -6,7 +6,7 @@ angular.module('silentCloud1651').controller('ResultsCtrl',function($scope, $roo
     var nextUrl = nextUrl || (settings.streamsBaseUrl + '/search/streams?q=' + $stateParams.text + '&limit=20');
 
     var loadStreams = function() {
-        $http.jsonp(nextUrl + '&callback=JSON_CALLBACK')
+        $http.jsonp(nextUrl + '&callback=JSON_CALLBACK&client_id=rf1983xtcix7jlj021fnvfi6gejiyfa')
             .then(
                 function (response) {
                     $scope.streams = $scope.streams.concat(response.data.streams);
