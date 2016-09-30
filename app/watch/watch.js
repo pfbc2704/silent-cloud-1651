@@ -6,7 +6,7 @@ angular.module('silentCloud1651').controller('WatchCtrl',function($scope, $rootS
 
     var loadStream = function() {
         $rootScope.busy = true;
-        $http.jsonp(settings.streamsBaseUrl + '/streams/'+$stateParams.id+'?callback=JSON_CALLBACK' )
+        $http.jsonp(settings.streamsBaseUrl + '/streams/'+$stateParams.id+'?callback=JSON_CALLBACK&client_id=rf1983xtcix7jlj021fnvfi6gejiyfa' )
             .then(
                 function(response) {
                     $scope.stream = response.data.stream;
